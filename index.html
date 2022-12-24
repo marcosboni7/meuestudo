@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="public/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="public/css/swiper.css" />
+    <link rel="stylesheet" href="public/css/libraries.css" />
+    <link rel="stylesheet" href="public/css/frontend.css" />
+    <script src="../code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+    <script src="../cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.min.js"
+        integrity="sha512-efUTj3HdSPwWJ9gjfGR71X9cvsrthIA78/Fvd/IN+fttQVy7XWkOAXb295j8B3cmm/kFKVxjiNYzKw9IQJHIuQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="public/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="public/img/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="public/img/favicon-512x512.png">
+    <link rel="apple-touch-icon" href="index.html">
+    <link rel="apple-touch-icon" sizes="152x152" href="public/img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="public/img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="public/img/apple-touch-icon.png">
+    <link rel="manifest" href="manifest.json" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Rifandos">
+    <meta name="apple-mobile-web-app-title" content="">
+    <meta name="theme-color" content="#000000">
+    <meta name="msapplication-navbutton-color" content="#000000">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="msapplication-starturl" content="/">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-91C341EXFR"></script>
+    <script>
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-91C341EXFR');
+    </script>
+
+    <title>China Sorteios</title>
+    <script type="module">
+        import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+        const el = document.createElement('pwa-update');
+        document.body.appendChild(el);
+    </script>
+</head>
+
+<body data-url="https://rifandos.com.br">
+    <header>
+        <div class="container" id="menu">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="" alt="CHINA SORTEIOS">
+                </a>
+            </div>
+
+            <div class="find-my-orders">
+                <a href="#" onclick="toggleMyRequestModal()"><i class="fa-solid fa-magnifying-glass"></i> Meus
+                    pedidos</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html"> Início</a></li>
+                    <li class="categories_list">
+                        <a href="#">Categorias</a>
+                        <div class="categories">
+                            <ul>
+                                <li>
+                                    <a href="index510d.html?c=todas">
+                                        Todas
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#ganhadores">Ganhadores</a></li>
+                    <li><a href="#" onclick="toggleMyRequestModal()">Meus pedidos</a></li>
+                    <li><a href="index.html">Termos</a></li>
+                </ul>
+            </nav>
+            <nav id="menu_mobile" onclick="toggleMobileMenu()">
+                <i class="fa-sharp fa-solid fa-bars-staggered"></i>
+            </nav>
+        </div>
+        <div class="menu-mobile-content">
+            <div class="menu-mobile-header">
+                <span onclick="toggleMobileMenu()"><i class="fa-solid fa-xmark"></i></span>
+            </div>
+            <div class="menu-mobile-body">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li class="categories_list">
+                            <a href="#"
+                                onclick="document.querySelector('.menu-mobile-content  .categories_list .categories').classList.toggle('active')">Categorias</a>
+                            <div class="categories">
+                                <ul>
+                                    <li>
+                                        <a href="index510d.html?c=todas">
+                                            Todas
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#ganhadores">Ganhadores</a></li>
+                        <li><a href="#" onclick="toggleMyRequestModal()">Meus pedidos</a></li>
+                        <li><a href="index.html">Termos</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <script>
+        function toggleMobileMenu() {
+            document.querySelector('.menu-mobile-content').classList.toggle('active');
+        }
+    </script>
+    <style>
+        .swiper-slide {
+            background-image: url('');
+        }
+
+        @media (max-width: 768px) {
+            .swiper-slide {
+                background-image: url('') !important;
+            }
+        }
+    </style>
+
+    <div class="swiper-container">
+
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"></div>
+        </div>
+
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+
+        <div class="swiper-pagination"></div>
+
+    </div>
+
+    <section class="sorteios">
+        <div class="container">
+            <div class="section-header sorteios-header">
+                <div class="d-flex">
+                    <i class="fa-solid fa-bookmark"></i>
+                    <h2>GRANDES PRÊMIOS</h2>
+                </div>
+                <p>Aproveite essa é sua chance de mudar de vida!</p>
+            </div>
+            <div class="section-body sorteios-body">
+                <article class="sorteio">
+                    <a href="iphone-14-pro-max-ou-10-mil-no-pix.html">
+                        <div class="sorteio-img" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQigCPnYsnH2XcDk92sAROSjtAi5TXWe4IrmA&usqp=CAU');">
+                        </div>
+                        <div class="sorteio-desc">
+                            <p class="sorteio-title">ESSE É UM TESTE DO SITE DO WILLIAM</p>
+                            <p class="sorteio-price">R$ 0,59</p>
+                            <div class="progress-sell">
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                        role="progressbar" style="width: 30%" aria-valuenow="10" aria-valuemin="0"
+                                        aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+\
+                        <span style="background-color: red;" class="sorteio-status disponivel">Disponível</span>
+                    </a>
+                </article>
+            </div>
+            <a href="index510d.html?c=todas" class="see-all">Ver todas</a>
+        </div>
+    </section>
+    <section class="winners" id="ganhadores">
+        <div class="container">
+            <div class="section-header">
+                <div class="d-flex">
+                    🍀
+                    <h2>GANHADORES</h2>
+                </div>
+                <p>Confira os últimos ganhadores</p>
+            </div>
+            <div class="section-body">
+                <div class="winners-list">
+                    <div class="winner-content">
+                        <a href="index.html">
+                            <div class="raffle-image">
+                            </div>
+                            <div class="winner-name">
+                                <p>
+                                    <b>🎊🎉 WILLIAM GANHADOR</b> <br />
+                                    Ganhou: com a cota: <b>14544</b>
+                                </p>
+                                <p class="draw-date">Data do Sorteio: <b> 22/12/2022</b></p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="passo-a-passo">
+        <div class="container">
+            <div class="section-body step-body">
+
+                <div class="step">
+                    <div class="step-header">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <h2>ESCOLHA O SORTEIO</h2>
+                    </div>
+                    <div class="step-body">
+                        <p>
+                            Escolha o prêmio que gostaria de concorrer, verifique a descrição, regulamento do sorteio e
+                            fotos. Em caso de dúvidas entre em contato com o administrador.
+                        </p>
+                    </div>
+                    <span>1</span>
+                </div>
+
+                <div class="step">
+                    <div class="step-header">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <h2>SELECIONE SEUS NÚMEROS</h2>
+                    </div>
+                    <div class="step-body">
+                        <p>
+                            Escolha o prêmio que gostaria de concorrer, verifique a descrição, regulamento do sorteio e
+                            fotos. Em caso de dúvidas entre em contato com o administrador.
+                        </p>
+                    </div>
+                    <span>2</span>
+                </div>
+
+                <div class="step">
+                    <div class="step-header">
+                        <i class="fa-solid fa-money-bill"></i>
+                        <h2>FAÇA O PAGAMENTO</h2>
+                    </div>
+                    <div class="step-body">
+                        <p>
+                            Escolha o prêmio que gostaria de concorrer, verifique a descrição, regulamento do sorteio e
+                            fotos. Em caso de dúvidas entre em contato com o administrador.
+                        </p>
+                    </div>
+                    <span>3</span>
+                </div>
+
+                <div class="step">
+                    <div class="step-header">
+                        <i class="fa-solid fa-clock"></i>
+                        <h2>AGUARDE O SORTEIO</h2>
+                    </div>
+                    <div class="step-body">
+                        <p>
+                            Escolha o prêmio que gostaria de concorrer, verifique a descrição, regulamento do sorteio e
+                            fotos. Em caso de dúvidas entre em contato com o administrador.
+                        </p>
+                    </div>
+                    <span>4</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal modal_my_requests">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Meus pedidos</h2>
+                <span onclick="toggleMyRequestModal()">x</span>
+            </div>
+            <div class="modal-body">
+                <p>Para consultar seus pedidos, digite seu número</p>
+                <form method="POST">
+                    <label for="">
+                        <input type="tel" name="phone_number" class="phone-number" maxlength="15" minlength="15">
+                    </label>
+                    <input type="submit" id="consult-request-btn" value="Consultar">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="block__install" id="BlockInstall">
+        <div class="inner">
+            <div class="close" id="BlockInstallClose">
+                <span>
+                    X
+                </span>
+            </div>
+            <div class="logo">
+                <img src="public/img/favicon-32x32.png" />
+            </div>
+            <div class="name">
+                <span class="title">China Sorteios</span>
+                <span class="description">Instale nosso aplicativo oficial.</span>
+            </div>
+            <div class="cta">
+                <button id="BlockInstallButton" class="btn btn-outline">Instalar</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p><a href="https://api.whatsapp.com/send?phone=5521980906289" target="_blank"> Todos os direitos reservados -
+                china Sorteios</a></p>
+    </footer>
+    <script src="public/js/swiper-bundle.min.js"></script>
+    <script type="module">
+
+        var Swipes = new Swiper('.swiper-container', {
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
+
+  //const swiper = new Swiper(...);
+    </script>
+    <script>
+        /* FORMAT PHONE NUMBER */
+
+        /* Máscaras ER */
+        function mascara(o, f) {
+            v_obj = o
+            v_fun = f
+            setTimeout("execmascara()", 1)
+        }
+        function execmascara() {
+            v_obj.value = v_fun(v_obj.value)
+        }
+        function mtel(v) {
+            v = v.replace(/\D/g, ""); //Remove tudo o que não é dígito
+            v = v.replace(/^(\d{2})(\d)/g, "($1) $2"); //Coloca parênteses em volta dos dois primeiros dígitos
+            v = v.replace(/(\d)(\d{4})$/, "$1-$2"); //Coloca hífen entre o quarto e o quinto dígitos
+            return v;
+        }
+
+        document.querySelectorAll('.phone-number').forEach((e) => {
+            e.onkeyup = function () {
+                mascara(this, mtel);
+            }
+        });
+
+
+        document.querySelector('.modal_my_requests').onsubmit = async function (e) {
+
+            e.preventDefault();
+
+            document.querySelector('#consult-request-btn').value = "Consultando...";
+            document.querySelector('#consult-request-btn').setAttribute('disabled', 'disabled');
+
+
+            let url = document.querySelector('body').getAttribute('data-url');
+            let phone = document.querySelector('input[name=phone_number]').value;
+
+            if (phone) {
+
+                let res = await fetch(`${url}/meus-pedidos`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'Application/json',
+                        'Accept': 'Application/json'
+                    },
+                    body: JSON.stringify({ phone })
+                });
+
+                let json = await res.json();
+
+                if (json.user) {
+                    window.location = `${url}/meus-pedidos`;
+                } else {
+                    document.querySelector('#consult-request-btn').value = "Consultar";
+                    document.querySelector('#consult-request-btn').removeAttribute('disabled');
+                    alert('Não encontramos pedidos para seu número');
+                }
+
+            } else {
+                alert('número inválido');
+                document.querySelector('#consult-request-btn').innerText = "Consultar";
+                document.querySelector('#consult-request-btn').removeAttribute('disabled');
+            }
+
+        }
+
+
+        function toggleMyRequestModal() {
+            document.querySelector('.modal_my_requests').classList.toggle('active');
+            document.querySelector('input[name=phone_number]').focus();
+        }
+
+
+
+        /* INSTALL APP */
+
+
+        // ------------------------
+        // Cookies methods found on w3schools - We need them to not annoy our visitors
+        // https://www.w3schools.com/js/js_cookies.asp
+        // ------------------------
+        function setCookie(cname, cvalue, exdays) {
+            var d = new Date();
+            d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
+            var expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+
+        function getCookie(cname) {
+            var name = cname + "=";
+            var decodedCookie = decodeURIComponent(document.cookie);
+            var ca = decodedCookie.split(";");
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == " ") {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+
+        function checkCookie() {
+            var user = getCookie("username");
+            if (user != "") {
+                alert("Welcome again " + user);
+            } else {
+                user = prompt("Please enter your name:", "");
+                if (user != "" && user != null) {
+                    setCookie("username", user, 365);
+                }
+            }
+        }
+
+        // ------------------------
+        // Here starts our part
+        // ------------------------
+        $(document).ready(function () {
+            // When the user clicks on Close, we need to keep this in mind and not annoy him again
+            $("#BlockInstallClose").on("click", function (e) {
+                $("#BlockInstall").removeClass("is-active");
+                setCookie("BlockInstallCookieHide", 1, 14);
+            });
+        });
+
+        // ------------------------
+        // We listen to the `beforeinstallprompt` event
+        // If the user has
+        // ------------------------
+        window.addEventListener("beforeinstallprompt", function (event) {
+            // Don't display the standard one
+            event.preventDefault();
+
+            // We check if the user has the Don't Show Cookie stored. If not, we'll show him the banner.
+            let cookieBlockInstallCookieHide = getCookie("BlockInstallCookieHide");
+
+            console.log(cookieBlockInstallCookieHide);
+
+            if (!cookieBlockInstallCookieHide) {
+                $("#BlockInstall").addClass("is-active");
+            }
+
+            // Save the event to use it later
+            window.promptEvent = event;
+        });
+
+        // If the visitor clicks on `Install` button, we'll show the banner
+        document.addEventListener("click", function (event) {
+            if (event.target.matches("#BlockInstallButton")) {
+                addToHomeScreen();
+            }
+        });
+
+        function addToHomeScreen() {
+            // Install prompt
+            window.promptEvent.prompt();
+
+            // I added a Google Analytics Event so we can know how many installs we have
+            window.promptEvent.userChoice.then(function (choiceResult) {
+                if (choiceResult.outcome === "accepted") {
+                    gtag("event", "Installed PWA", {
+                        event_category: "PWA",
+                        value: 1,
+                    });
+                } else {
+                    // Do nothing
+                }
+                window.promptEvent = null;
+            });
+        }
+
+
+
+
+
+
+
+    </script>
+</body>
+
+<!-- Mirrored from rifandos.com.br/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 20 Dec 2022 13:59:07 GMT -->
+
+</html>

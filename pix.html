@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/x-icon" href="/storage/images/favicon.png">
+    <link rel="stylesheet" href="https://rifasonline.me/css/app.css">
+    <script src="https://rifasonline.me/js/icons.js"></script>
+    <title>pagina teste</title>
+    <style>
+        .bg-primary {
+            background: #f7024c;
+        }
+
+        .text-primary {
+            color: #f7024c;
+        }
+
+        .on-hover:hover {
+            color: #f7024c;
+        }
+    </style>
+</head>
+
+<body class="dark relative bg-raffle dark:bg-raffle-900 font-body">
+    <header id="header" class="bg-white shadow-lg dark:bg-black">
+        <div class="container m-auto">
+            <div class="flex justify-between items-center text-raffle-900 dark:text-raffle py-4 md:py-0 px-4">
+                <a href="https://rifasonline.me">
+                    <h1 class="font-bold text-2xl text-right montserrat-regular">
+                         <br>
+                    </h1>
+                </a>
+                <nav
+                    class="hidden font-normal uppercase md:flex justify-between space-x-4 lg:space-x-14 text-raffle-900 dark:text-raffle">
+                    <a class="relative font-bold on-hover" href="">Sorteios</a>
+                    <a class="relative font-bold on-hover" href="">Ganhadores</a>
+                    <a class="relative font-bold on-hover" href="">Meus números</a>
+                    <a class="relative font-bold on-hover" href="">Termos</a>
+                </nav>
+                <div></div>
+                <svg id="menu-btn" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6 md:hidden">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
+                </svg>
+            </div>
+        </div>
+    </header>
+    <div id="content">
+        <section class="bg-raffle dark:bg-[#161616]">
+            <div class="container m-auto">
+                <div class="flex flex-col p-4">
+                    <div class="flex flex-col">
+                        <h1 class="text-raffle-900 dark:text-raffle text-2xl font-bold uppercase">Reserva: #1663
+                        </h1>
+                        <p class="text-gray-500 text-sm my-2">
+                            Detalhes da sua compra feita no dia 23/12/2022 às 15h29
+                        </p>
+                    </div>
+                    <div class="flex p-2 items-center rounded-md bg-white dark:bg-black mb-2">
+                        <div class="p-3">
+                            <i class="far fa-hourglass text-2xl text-primary"></i>
+                        </div>
+                        <div>
+                            <h3 class="uppercase text-raffle-900 dark:text-raffle">
+                                reserva realizada!
+                            </h3>
+                            <p class="text-sm text-raffle-900 dark:text-raffle">
+                                Garanta seu número efetuando o pagamento em até 2 dia(s) </p>
+                        </div>
+                    </div>
+                    <div class="flex my-3 items-start max-w-md text-white">
+                        <div class="mr-2">
+                            <img src="/storage/images/WG7yWgmYHknAbn1XaOewC9XXyqlfglaGR7tn7d9S.jpg"
+                                class="rounded max-w-[150px] max-h-[150px]" alt="foto">
+
+                        </div>
+                        <div class="flex flex-col">
+                            <h2 class="text-raffle-900 dark:text-raffle text-lg">100 MIL NÚMEROS - NÚMEROS AUTOMÁTICOS
+                            </h2>
+                            <span class="text-gray-500 text-sm">
+                                <strong>Quantidade:</strong>
+                                1 cotas
+                            </span>
+                            <span class="text-gray-500 text-sm">
+                                <strong>valor unitário das cotas:</strong>
+                                R$ 0,35
+                            </span>
+                            <span class="text-raffle-900 dark:text-raffle text-sm">
+                                <strong>Total:</strong>
+                                R$ 0,35
+                            </span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col w-full flex-wrap md:flex-row md:justify-between mb-3">
+                        <div class="flex-1 md:mb-0 md:mr-4">
+                            <div class="rounded overflow-hidden">
+
+                                <div class="outline-none">
+                                    <div class="pt-4 overflow-hidden ease duration-500">
+                                        <div style="display: none" class="flex flex-col my-3 items-center m-auto">
+                                            <img class='w-full mb-3 w-[360px] max-w-[360px]' src="" id="pix_qrcode_img"
+                                                alt='qrcode'>
+                                            <div class="bg-yellow-400 bg-opacity-20 p-2 px-3 my-2 rounded w-full">
+                                                <span class="text-yellow-400">
+                                                    Para efetuar o pagamento, copie o código pix abaixo e cole no seu
+                                                    aplicativo de banco.
+                                                </span>
+                                            </div>
+                                            <div class="flex w-full items-center">
+                                                <label for="qr_code_hash"></label>
+                                                <input disabled id="qr_code_hash" value=""
+                                                    class="w-8/12 border-none rounded-l-lg bg-black bg-opacity-80 text-white focus:outline-none focus:ring-1 focus:ring-orange focus:border-transparent"
+                                                    type="text">
+                                                <a data-clipboard-text="" id="qr_code_hash_clipboard"
+                                                    class="w-4/12 clipboard-btn bg-orange-600 p-2 rounded-r-md text-center text-white">
+                                                    Copiar
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <form action="https://rifasonline.me/payments/withPix" method="POST">
+                                                <input type="hidden" name="_token"
+                                                    value="kweq8DzhyxkYYiCSRpWPF3aVg4jNt9Wrn1wtsPzO"> <input
+                                                    type="hidden" name="order_id" value="1663">
+                                                <input type="hidden" name="payer_email" value="dsdsdsds@gmail.com">
+                                                <div id="pix_tab" class="flex flex-wrap space-y-3 payment_method_tab ">
+                                                    <button
+                                                        class="bg-green-600 w-full flex justify-between px-4 py-3 items-center text-white transitio cursor-pointer">
+                                                        <span>Pagar com Pix</span>
+                                                        <img src="https://rifasonline.me/images/pix-logo.png"
+                                                            class="w-14 pointer-events-none" alt="pix logo">
+                                                    </button>
+                                                    <br>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-3 flex justify-center">
+                        <img class="w-full max-w-[610px]" src="https://rifasonline.me/images/seguro-.png"
+                            alt="Compra segura">
+                    </div>
+                    <p class="font-medium text-white text-sm flex flex-col md:flex-row items-center">
+                        <a class="bg-[#25D366] p-2 rounded flex items-center mr-2 mb-2 md:mb-0" target="_blank"
+                            href="https://wa.me/+5555985918574">
+                            <i class="fab fa-whatsapp text-white text-2xl mr-2"></i>
+                            <span>Clique aqui</span>
+                        </a> <span class="text-raffle-900 dark:text-raffle">para entrar em contato via WhatsApp.</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="bg-primary pt-10" id="steps">
+            <div class="container m-auto">
+                <div class="flex flex-col md:flex-row items-start text-white ">
+                    <div class="flex-1 relative p-4 min-h-[230px]">p
+                        <span
+                            class="absolute text-black font-extrabold text-opacity-20 text-[240px] font-sans -top-[100px] -left-[5px]">1</span>
+                        <h2 class="uppercase font-bold text-xl mb-4">
+                            <i class="fas fa-search"></i>
+                            ESCOLHA O SORTEIO
+                        </h2>
+                        <p class="">Escolha o prêmio que gostaria de concorrer, verifique a descrição, regulamento
+                            do sorteio e fotos. Em caso de dúvidas entre em contato com o administrador.</p>
+                    </div>
+                    <div class="flex-1 p-4 relative min-h-[230px]">
+                        <span
+                            class="absolute text-black font-extrabold text-opacity-20 text-[240px] font-sans -top-[100px] -left-[5px]">2</span>
+                        <h2 class="uppercase font-bold text-xl mb-4">
+                            <i class="fas fa-check-circle"></i>
+                            SELECIONE SEUS BILHETES
+                        </h2>
+                        <p class="">Você pode escolher quantos bilhetes desejar!
+                            Mais bilhetes, mais chances de ganhar.</p>
+                    </div>
+                    <div class="flex-1 p-4 relative min-h-[230px]">
+                        <span
+                            class="absolute text-black font-extrabold text-opacity-20 text-[240px] font-sans -top-[100px] -left-[5px]">3</span>
+                        <h2 class="uppercase font-bold text-xl mb-4">
+                            <i class="fas fa-money-bill-wave"></i>
+                            FAÇA O PAGAMENTO
+                        </h2>
+                        <p class="z-20">Faça o pagamento no(s) método(s) de pagamento(s) disponíveis no site.</p>
+                    </div>
+                    <div class="flex-1 p-4 relative min-h-[230px]">
+                        <span
+                            class="absolute text-black font-extrabold text-opacity-20 text-[240px] font-sans -top-[100px] -left-[5px] ">4</span>
+                        <h2 class="uppercase font-bold text-xl mb-4">
+                            <i class="fas fa-hourglass-half"></i>
+                            AGUARDE O SORTEIO
+                        </h2>
+                        <p class="z-20">Aguarde o Sorteio. Cruze os dedos! Você pode ser o próximo sorteado.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer id="footer" class="h-48 bg-raffle dark:bg-[#161616]">
+            <div class="container m-auto">
+                <div class="flex flex-col items-center">
+                    <div class="w-full flex flex-col md:flex-row justify-between items-center">
+                        <nav class="text-raffle-500 dark:text-gray-300 flex mt-8 space-x-6 justify-between px-3">
+                            <a href="https://rifasonline.me">Home</a>
+                            <a href="https://rifasonline.me/terms">Termos</a>
+                            <a href="https://rifasonline.me/sorteios">Sorteios</a>
+                        </nav>
+                        <div class="flex flex-col items-center p-2 mt-3 dark:text-gray-300 md:flex-row md:items-center">
+                            <span class="mr-4">Siga nossas redes sociais</span>
+                            <nav class="flex">
+                                <a href="https://instagram.com/rifasonline0111" target="_blank"
+                                    class="p-3 cursor-pointer">
+                                    <i class="fab fa-instagram text-raffle-900 dark:text-raffle on-hover text-2xl"></i>
+                                </a>
+                                <a href="https://wa.me/+5599999999999" target="_blank" class="p-3 cursor-pointer">
+                                    <i class="fab fa-whatsapp text-raffle-900 dark:text-raffle on-hover text-2xl"></i>
+                                </a>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="p-2 text-center text-raffle-500 dark:text-gray-300 bg-raffle dark:bg-[#161616]">
+                        <small>
+                            &#169;
+                            <a id="linksistemaderifa" class="text-primary" href="https://sistemaderifa.com.br/">
+
+                            </a>
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div class="fixed right-5 bottom-5">
+        <a target="_blank" href="https://wa.me/+5599999999999">
+            <div class="flex items-center justify-center rounded-full p-4 md:p-6 bg-[#25D366]">
+                <i class="fab fa-whatsapp text-white text-2xl md:text-3xl"></i>
+            </div>
+        </a>
+    </div>
+    <script src="https://rifasonline.me/js/script.js"></script>
+    <script src="https://rifasonline.me/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
+    <script src="https://rifasonline.me/admin/js/vendors/inputmask/jquery.inputmask.js"></script>
+    <script>
+        $(document).ready(function () {
+            const header = document.querySelector("header");
+            const content = document.querySelector("#content");
+            const footer = document.querySelector("#footer");
+            $(".phone").inputmask("(99) 9 9999-9999");
+            $(".card").inputmask("9999 9999 9999 9999");
+            $(".card-expiration-date").inputmask("99/99");
+            $(".cvv").inputmask("999");
+            $(".cpf").inputmask("999.999.999-99");
+
+            $('.slider-pro').sliderPro({
+                width: 500,
+                height: 500,
+                autoplay: true,
+                buttons: false,
+                autoplayDelay: 4000
+            });
+
+            (function ($) {
+                $.fn.inputFilter = function (inputFilter) {
+                    return this.on("input keydown keyup mousedown mouseup select contextmenu drop", function () {
+                        if (inputFilter(this.value)) {
+                            this.oldValue = this.value;
+                            this.oldSelectionStart = this.selectionStart;
+                            this.oldSelectionEnd = this.selectionEnd;
+                        } else if (this.hasOwnProperty("oldValue")) {
+                            this.value = this.oldValue;
+                            this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
+                        } else {
+                            this.value = "";
+                        }
+                    });
+                };
+            }(jQuery));
+
+            $(".only-number-input").inputFilter(function (value) {
+                return /^\d*$/.test(value);
+            });
+
+            let headerH = header.offsetHeight;
+            let contentH = content.offsetHeight;
+            let footerH = footer.offsetHeight;
+
+            let windowH = window.innerHeight || document.documentElement.clientHeight;
+            let contH = headerH + contentH + footerH;
+            if (contH < windowH) {
+                let minContentHeight = windowH - (headerH + footerH);
+                content.firstElementChild.setAttribute("style", `min-height: ${minContentHeight}px`);
+
+            }
+        });
+
+        const clipboard = new ClipboardJS('.clipboard-btn');
+        clipboard.on('success', () => alert("Copiado com sucesso!"))
+    </script>
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
+    <script>
+        const mp = new MercadoPago(`APP_USR-dcb6ab47-9158-4522-9219-a4cb43409ef6`);
+
+        // document.querySelector("#form-checkout__next").addEventListener("click", e => {
+        //     const btn = e.target;
+        //     btn.innerHTML = "Enviando...";
+        //     validateFormCheckout();
+        // });
+
+        function validateFormCheckout() {
+            const form = document.querySelector("#form-checkout");
+            const inputs = document.querySelectorAll("#form-checkout input");
+            const inputsValidated = {
+                card_number: false,
+                expiration_date: false,
+                cvv: false,
+                card_holdname: false,
+                payer_email: false,
+            };
+            inputs.forEach(input => {
+                const inputId = input.getAttribute("id");
+                if (inputId === "card_number") {
+                    inputsValidated[input.getAttribute("id")] = validateCreditCardNumber(input.value);
+                } else if (inputId === "expiration_date") {
+                    inputsValidated[input.getAttribute("id")] = validateExpirationDate(input.value);
+                } else if (inputId === "cvv") {
+                    inputsValidated[input.getAttribute("id")] = validateSecutityCode(input.value);
+                } else if (inputId === "card_holdname") {
+                    inputsValidated[input.getAttribute("id")] = validateCardHoldName(input.value);
+                } else if (inputId === "payer_email") {
+                    inputsValidated[input.getAttribute("id")] = input.value !== "" && input.value.length > 4 &&
+                        input.value.includes("@")
+                }
+            });
+            let isFormValid = 0;
+            for (const evtKey in inputsValidated) {
+                if (inputsValidated[evtKey] !== false) {
+                    isFormValid += 1
+                }
+            }
+            if (isFormValid === 5) {
+                getCardToken(
+                    inputsValidated.card_number,
+                    inputsValidated.card_holdname,
+                    inputsValidated.expiration_date.substring(0, 2),
+                    inputsValidated.expiration_date.substring(2),
+                    inputsValidated.cvv
+                ).then(getCardTokenResponse => {
+                    getPaymentMethodId(
+                        getCardTokenResponse.first_six_digits
+                    ).then(getPaymentMethodIdResponse => {
+                        let paymentMethodId = getPaymentMethodIdResponse.results[0].id;
+                        let card_token_input = document.createElement("input");
+                        let payment_method_id_input = document.createElement("input");
+                        card_token_input.setAttribute("type", "hidden");
+                        card_token_input.setAttribute("name", "token");
+                        card_token_input.setAttribute("value", getCardTokenResponse.id);
+
+                        payment_method_id_input.setAttribute("type", "hidden");
+                        payment_method_id_input.setAttribute("name", "payment_method_id");
+                        payment_method_id_input.setAttribute("value", paymentMethodId);
+
+                        form.appendChild(card_token_input);
+                        form.appendChild(payment_method_id_input);
+
+                        let formBtn = $("#form-checkout__submit");
+
+                        formBtn.attr("type", "submit");
+                        formBtn.click();
+                    })
+
+                });
+            } else {
+                //campos estão errados,
+                //validar campos
+                console.log('validar os campos')
+            }
+
+        }
+
+        async function getCardToken(card_number, card_holdname, cardExpirationMonth, cardExpirationYear, securityCode) {
+            return await mp.createCardToken({
+                cardNumber: card_number,
+                cardholderName: card_holdname,
+                cardExpirationMonth: cardExpirationMonth,
+                cardExpirationYear: cardExpirationYear,
+                securityCode: securityCode,
+            });
+        }
+        async function getPaymentMethodId(bin) {
+            return await mp.getPaymentMethods({
+                bin: bin
+            })
+        }
+
+        function validateExpirationDate(expirationDate) {
+            let withoutDashes = expirationDate.replaceAll("_", "");
+            let withoutBar = withoutDashes.replaceAll("/", "");
+            return withoutBar.length === 4 ? withoutBar : false;
+        }
+
+        function validateCardHoldName(name) {
+            if (name === "") {
+                return false;
+            }
+            return name.length >= 3 ? name : false;
+        }
+
+        function validateSecutityCode(securityCode) {
+            let withoutDashes = securityCode.replaceAll("_", "");
+            return withoutDashes.length === 3 ? withoutDashes : false;
+        }
+
+        function validateCreditCardNumber(cardNumber) {
+            let withoutSpaces = cardNumber.replaceAll(" ", "");
+            let withoutDashes = withoutSpaces.replaceAll("_", "");
+            return withoutDashes.length === 16 ? withoutDashes : false;
+        }
+
+        function handleFileSelectedEvent() {
+            const form = document.querySelector("#receipt-form");
+            if (form) {
+                const inputFile = document.querySelector("#receipt");
+                inputFile.addEventListener("change", e => {
+                    if (e.target.files[0]) {
+                        form.submit();
+                    }
+                });
+            }
+        }
+        handleFileSelectedEvent();
+    </script>
+    <script>
+        setInterval(function () {
+
+            fetch(`https://rifasonline.me/pedidos/status/128e359f-6052-4b2c-997f-8ea366e0cb2e`, {
+                method: 'GET'
+            })
+                .then(res => res.json())
+                .then(res => {
+                    if (res.status === "paid") {
+                        document.location.reload();
+                    }
+
+                })
+                .catch(res => console.log(res))
+        }, 3000);
+        setInterval(function () {
+            fetch(`https://rifasonline.me/pedidos/verifyPayment/128e359f-6052-4b2c-997f-8ea366e0cb2e`, {
+                method: 'GET'
+            })
+                .then(res => res.json())
+                .then(res => {
+                    console.log(res);
+                    if (res.status === "paid") {
+                        document.location.reload();
+                    }
+
+                })
+                .catch(res => console.log(res))
+        }, 10000);
+    </script>
+    <script>
+        if (typeof window['fbq'] === 'function') {
+
+            fbq('track', 'AddToCart');
+
+        }
+
+        if (window.google_ads.enabled) {
+            console.log("google ads scrips enabled")
+            gtag('event', 'conversion', {
+                'send_to': `${window.google_ads.id}/${window.google_ads.add_to_card_id}`,
+            });
+        }
+
+        if (window.taboola.enabled) {
+            console.log("taboola scrips enabled")
+            _tfa.push({
+                notify: 'event',
+                name: 'add_to_cart',
+                id: window.taboola.id
+            });
+        }
+    </script>
+    <div id="mobile_menu" class="md:hidden w-screen fixed bg-white dark:bg-black">
+        <div class="container m-auto">
+            <div class="flex flex-col justify-between">
+                <nav class="flex flex-col px-5 pt-4">
+                    <a class="flex space-x-2 p-4 justify-between items-center rounded-xl mb-4 font-medium bg-primary"
+                        href="https://rifasonline.me">
+                        <span class="text-raffle-900 dark:text-raffle">Principal</span>
+                        <i class="fas fa-home text-2xl text-raffle-900 dark:text-raffle"></i>
+                    </a>
+                    <a class="flex space-x-2 p-4 justify-between items-center rounded-xl mb-4 font-medium bg-primary"
+                        href="https://rifasonline.me/ganhadores">
+                        <span class="text-raffle-900 dark:text-raffle">Ganhadores</span>
+                        <i class="fas fa-trophy text-2xl text-raffle-900 dark:text-raffle"></i>
+                    </a>
+                    <a class="flex space-x-2 p-4 justify-between items-center rounded-xl mb-4 font-medium bg-primary"
+                        href="https://rifasonline.me/sorteios">
+                        <span class="text-raffle-900 dark:text-raffle">Sorteios</span>
+                        <i class="fas fa-medal text-2xl text-raffle-900 dark:text-raffle"></i>
+                    </a>
+                    <a class="flex space-x-2 p-4 justify-between items-center rounded-xl mb-4 font-medium bg-primary"
+                        href="https://rifasonline.me/pedidos">
+                        <span class="text-raffle-900 dark:text-raffle">Meus números</span>
+                        <i class="fas fa-list-ol text-2xl text-raffle-900 dark:text-raffle"></i>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
